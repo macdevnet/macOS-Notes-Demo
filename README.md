@@ -3,7 +3,7 @@
 ### Overview
 
 This application is intended to be used as a macOS (OSX) sample application.
-It is intended to be used to demonstrate a number of Cocoa good practices and techniques including
+It hopefully demonstrates a number of Cocoa good practices and techniques including
 
 + Separation of concerns using MVC
 + Window Handling
@@ -31,11 +31,11 @@ The application is currently incomplete.
 Things still to do.
 
 + The application UI is very basic and could do with a lot of polish
-+ The application menu structure is pretty much as Xcode creates it. Each menu item needs to be reviewed and either hooked up or deleted.
++ Other than the New, Edit and Save meni items the applications menu structure is pretty much as Xcode creates it. Each menu item needs to be reviewed and either hooked up or deleted.
 + There is very little error handling in the application. There are a number of ```//TODO:``` comments where errors need to be created and raised.
 + Edit Windows are not positioned correctly
-+ There are still one or two display glitches when you hover the mouse over note. 
-+ The app uses JSON files in the ~/Documents folder as its data. These are all currently loaded into memory. The app needs to be updated to use Core Data as its data store. 
++ There are still one or two display glitches when you hover the mouse over a note. 
++ The app uses JSON files in the ~/Documents folder as its data. These are all currently loaded into memory when the application starts. The app needs to be updated to use Core Data as its data store. 
 + Although the code should hopefully be quite readable, it could really do with far more commenting to be good sample/tutorial code.
 
 
