@@ -143,7 +143,7 @@ extension DataProvider
         }
     }
     
-    
+    //TODO: This function should thow be marked as throws and raise any errors
     private func loadNoteFiles(completionHandler: (notes: [Note]) -> Void)
     {
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
@@ -165,6 +165,8 @@ extension DataProvider
                         }
                     }
                 } catch let error as NSError {
+                    
+                    //TODO: This code needs to generate an error
                     NSLog("Error \(error)")
                 }
                 completionHandler(notes: notes)

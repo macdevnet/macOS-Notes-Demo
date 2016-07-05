@@ -91,9 +91,14 @@ extension PreviewViewController
         
     }
     
-    
+    //TODO: This code is too basic and needs to be improved. 
+    // It assumes that the attibuted string is all in a single font when 
+    // calculating the required height
+    // It really needs to analyse the entire string and work out it's real 
+    // height based on the fonts used in the string
     private func calculateHeight(string string: String, font: NSFont) -> CGFloat
     {
+
         let size = NSMakeSize(400, CGFloat(FLT_MAX))
         let textStorage = NSTextStorage(string: string)
         let textContainer = NSTextContainer(size: size)

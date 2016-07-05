@@ -80,10 +80,12 @@ extension EditViewController
         controller?.updateNoteValues(title: titleField.stringValue, content: contentField.attributedString())
     }
     
+    
     func saveDocument(sender: AnyObject)
     {
         saveNote()
     }
+    
     
     func checkCanSaveValues()
     {

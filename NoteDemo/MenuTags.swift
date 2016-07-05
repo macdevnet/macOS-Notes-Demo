@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+/// Used to make identifiying MenuItems a little easier to read in code.
+/// Menu Items should have their Tag value set to the corresponding value
 enum MenuTag: Int {
     case NewMenu = 100
     case OpenMenu = 110

@@ -90,6 +90,7 @@ extension EditController
     func canSaveNoteValues(title title: String, content: NSAttributedString) -> Bool
     {
         // Validate the passed content and decide if it can be saved. 
+        // For now just check both values are not whitespace
         let trimmedTitle = title.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         let trimmedContent = content.string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         return trimmedTitle != "" && trimmedContent != ""
