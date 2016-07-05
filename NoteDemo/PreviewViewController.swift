@@ -86,26 +86,20 @@ extension PreviewViewController
     
     private func calculateSize()
     {
-        titleHeightConstraint.constant += calculateHeight(string: titleField.attributedStringValue.string, font: titleField.font!)
-        contentHeightConstraint.constant += calculateHeight(string: contentField.attributedStringValue.string, font: contentField.font!)
+        titleHeightConstraint.constant += calculateHeight(string: titleField.attributedStringValue)
+        contentHeightConstraint.constant += calculateHeight(string: contentField.attributedStringValue)
         
     }
     
-    //TODO: This code is too basic and needs to be improved. 
-    // It assumes that the attibuted string is all in a single font when 
-    // calculating the required height
-    // It really needs to analyse the entire string and work out it's real 
-    // height based on the fonts used in the string
-    private func calculateHeight(string string: String, font: NSFont) -> CGFloat
+    
+    private func calculateHeight(string string: NSAttributedString) -> CGFloat
     {
-
         let size = NSMakeSize(400, CGFloat(FLT_MAX))
-        let textStorage = NSTextStorage(string: string)
+        let textStorage = NSTextStorage(attributedString:string)
         let textContainer = NSTextContainer(size: size)
         let layoutManager = NSLayoutManager()
         layoutManager.addTextContainer(textContainer)
         textStorage.addLayoutManager(layoutManager)
-        textStorage.addAttribute(NSFontAttributeName, value: font, range: NSMakeRange(0, textStorage.length))
         textContainer.lineFragmentPadding = 0.0
         layoutManager.glyphRangeForTextContainer(textContainer)
         return layoutManager.usedRectForTextContainer(textContainer).size.height
