@@ -36,7 +36,7 @@
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="220" id="8Zk-KZ-VLu"/>
                         <constraint firstAttribute="width" constant="360" id="8bU-uJ-qec"/>
                     </constraints>
-                    <textFieldCell key="cell" controlSize="mini" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="justified" title="Content" id="HgM-Tg-Ofw">
+                    <textFieldCell key="cell" controlSize="mini" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="justified" title="Content" allowsEditingTextAttributes="YES" id="HgM-Tg-Ofw">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

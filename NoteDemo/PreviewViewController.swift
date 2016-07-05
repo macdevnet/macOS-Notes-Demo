@@ -88,7 +88,6 @@ extension PreviewViewController
     {
         titleHeightConstraint.constant += calculateHeight(string: titleField.attributedStringValue)
         contentHeightConstraint.constant += calculateHeight(string: contentField.attributedStringValue)
-        
     }
     
     
